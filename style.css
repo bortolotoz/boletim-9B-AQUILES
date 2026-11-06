@@ -19,6 +19,11 @@ body {
   max-width: 1100px;
 }
 
+/* Elementos Utilitários */
+.oculto {
+  display: none !important;
+}
+
 /* Cabeçalho */
 .header {
   text-align: center;
@@ -36,97 +41,81 @@ body {
   color: #cbd5e1;
 }
 
-/* Grid de Cards de Resumo */
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 15px;
-  margin-bottom: 35px;
-}
-
-/* Card individual com cantos arredondados e borda roxa fina */
-.card {
+/* Card de Login por PIN */
+.card-login {
   background-color: #18181b;
-  border: 1px solid #8b5cf6; /* Borda fina em roxo */
-  border-radius: 12px; /* Cantos arredondados */
-  padding: 18px;
+  border: 1px solid #8b5cf6;
+  border-radius: 12px;
+  padding: 25px;
+  max-width: 400px;
+  margin: 0 auto 30px auto;
   text-align: center;
 }
 
-.card h3 {
-  font-size: 0.9rem;
-  color: #a1a1aa;
-  margin-bottom: 8px;
-}
-
-.card-valor {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #ffffff; /* Detalhes em branco */
-}
-
-.card-subtexto {
-  font-size: 0.75rem;
-  color: #34d399; /* Destaque leve em verde */
-  display: block;
-  margin-top: 4px;
-}
-
-/* Tabela Responsiva */
-.tabela-container {
-  width: 100%;
-  overflow-x: auto; /* Permite rolar para o lado em telas pequenas */
-  background-color: #18181b;
-  border-radius: 12px;
-  border: 1px solid #27272a;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
-}
-
-th, td {
-  padding: 14px 16px;
-  border-bottom: 1px solid #27272a;
-}
-
-th {
-  background-color: #27272a;
+.card-login h2 {
+  font-size: 1.4rem;
   color: #a855f7;
-  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.login-info {
   font-size: 0.95rem;
+  color: #cbd5e1;
+  margin-bottom: 20px;
 }
 
-td {
-  font-size: 0.9rem;
-  color: #f4f4f5;
+.campo-login {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+  margin-bottom: 20px;
 }
 
-/* Destaque visual para as situações */
-.situacao-bom {
-  color: #34d399;
-  font-weight: 600;
-}
-
-.situacao-atencao {
-  color: #f87171;
-  font-weight: 600;
-}
-
-.situacao-indisponivel {
+.campo-login label {
+  font-size: 0.85rem;
   color: #a1a1aa;
 }
 
-/* Ajustes para telas de celular */
-@media (max-width: 600px) {
-  .header h1 {
-    font-size: 1.8rem;
-  }
-  
-  th, td {
-    padding: 10px 12px;
-    font-size: 0.85rem;
-  }
+.campo-login input {
+  background-color: #0f0f12;
+  border: 1px solid #27272a;
+  border-radius: 6px;
+  padding: 10px 14px;
+  color: #ffffff;
+  font-size: 1rem;
+  outline: none;
 }
+
+.campo-login input:focus {
+  border-color: #8b5cf6;
+}
+
+/* Painel de Ações e Botões */
+.painel-acoes {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.btn-primario {
+  background-color: #8b5cf6;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-primario:hover {
+  background-color: #7c3aed;
+}
+
+.btn-secundario {
+  background-color: #27272a;
+  color: #ffffff;
+  border: 1px solid #8b5cf6;
+  border-radius: 6px;
+  padding: 10px
