@@ -206,6 +206,67 @@ body {
   margin-top: 4px;
 }
 
+/* Área e Layout dos Gráficos */
+.area-graficos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 35px;
+}
+
+.grafico-card {
+  background-color: #18181b;
+  border: 1px solid #8b5cf6;
+  border-radius: 12px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-card-grafico {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.grafico-card h2 {
+  font-size: 1.05rem;
+  color: #a855f7;
+  margin-bottom: 12px;
+}
+
+.header-card-grafico h2 {
+  margin-bottom: 0;
+}
+
+.badge-perigo {
+  background-color: #ef4444;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.grafico-card.card-perigo {
+  border-color: #ef4444;
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.2);
+}
+
+.grafico-container {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  min-height: 220px;
+}
+
+.container-barras-horizontal {
+  min-height: 480px;
+}
+
 /* Tabela Responsiva */
 .tabela-container {
   width: 100%;
@@ -253,10 +314,21 @@ td {
   color: #a1a1aa;
 }
 
+/* Ajustes para telas intermediárias (Tablet) */
+@media (max-width: 992px) {
+  .area-graficos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 /* Ajustes para telas de celular */
 @media (max-width: 600px) {
   .header h1 {
     font-size: 1.8rem;
+  }
+
+  .area-graficos {
+    grid-template-columns: 1fr;
   }
   
   th, td {
